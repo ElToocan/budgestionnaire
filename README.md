@@ -1,61 +1,173 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Project 🚀
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This is a Laravel project that provides a foundation for building web applications. It includes features for managing transactions, budgets, and user authentication. This project aims to provide a streamlined and efficient development experience with a focus on maintainability and scalability.
 
-## About Laravel
+## 🚀 Key Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Transaction Management**: Create, view, and delete financial transactions.
+- **Budgeting**: Define and manage budgets to track spending.
+- **User Authentication**: Secure user authentication system.
+- **Dashboard**: A central dashboard providing an overview of key data.
+- **Database Configuration**: Configured for various database systems (MySQL, PostgreSQL, SQLite, etc.).
+- **Caching**: Implements caching strategies for improved performance.
+- **Service Integration**: Ready for integration with third-party services like Postmark, Resend, SES, and Slack.
+- **Artisan Console**: Includes custom Artisan commands for automating tasks.
+- **Web Routes**: Defines web routes for handling HTTP requests.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🛠️ Tech Stack
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Backend**:
+    - PHP: ^8.2
+    - Laravel Framework: ^12.0
+    - Laravel Tinker: ^2.10.1
+- **Frontend**:
+    - JavaScript (ES Modules)
+    - Tailwind CSS
+- **Build Tools**:
+    - Vite
+    - npm/Yarn
+    - Composer
+- **Database**:
+    - Configured for MySQL, PostgreSQL, SQLite, SQL Server
+- **Caching**:
+    - Redis (optional)
+- **Development Dependencies**:
+    - fakerphp/faker
+    - laravel/pail
+    - laravel/pint
+    - laravel/sail
+    - mockery/mockery
+    - nunomaduro/collision
+    - phpunit/phpunit
+- **Packages**:
+    - axios
+    - concurrently
+    - laravel-vite-plugin
+    - @tailwindcss/vite
 
-## Learning Laravel
+## 📦 Getting Started
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Prerequisites
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- PHP >= 8.2
+- Composer
+- Node.js
+- npm or Yarn
+- A database system (MySQL, PostgreSQL, SQLite, etc.)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Installation
 
-## Laravel Sponsors
+1.  Clone the repository:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+    ```bash
+    git clone <repository-url>
+    cd <project-name>
+    ```
 
-### Premium Partners
+2.  Install PHP dependencies using Composer:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+    ```bash
+    composer install
+    ```
 
-## Contributing
+3.  Install JavaScript dependencies using npm or Yarn:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    ```bash
+    npm install # or yarn install
+    ```
 
-## Code of Conduct
+4.  Copy the `.env.example` file to `.env` and configure your environment variables:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    ```bash
+    cp .env.example .env
+    ```
 
-## Security Vulnerabilities
+    Edit the `.env` file to set up your database connection, application URL, and other settings.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+5.  Generate an application key:
 
-## License
+    ```bash
+    php artisan key:generate
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+6.  Run database migrations:
+
+    ```bash
+    php artisan migrate
+    ```
+
+### Running Locally
+
+1.  Start the Laravel development server:
+
+    ```bash
+    php artisan serve
+    ```
+
+2.  Start the Vite development server:
+
+    ```bash
+    npm run dev # or yarn dev
+    ```
+
+    This will compile the front-end assets and enable hot module replacement (HMR).
+
+3.  Access the application in your browser at the URL specified by `php artisan serve` (usually `http://localhost:8000`).
+
+## 📂 Project Structure
+
+```
+├── app/                      # Application code
+│   ├── Console/              # Artisan commands
+│   ├── Exceptions/           # Exception handling
+│   ├── Http/                 # HTTP controllers, middleware, requests
+│   │   ├── Controllers/      # Application controllers
+│   │   ├── Middleware/       # HTTP middleware
+│   ├── Models/               # Eloquent models
+├── bootstrap/                # Bootstrapping and configuration
+├── config/                   # Application configuration files
+├── database/                 # Database migrations and seeds
+├── lang/                     # Language files
+├── public/                   # Publicly accessible files
+├── resources/                # Assets, views, and language files
+│   ├── css/                  # CSS files
+│   ├── js/                   # JavaScript files
+│   ├── views/                # Blade templates
+├── routes/                   # Route definitions
+│   ├── console.php           # Console routes
+│   ├── web.php               # Web routes
+├── storage/                  # Storage for files and sessions
+├── tests/                    # Application tests
+├── vendor/                   # Composer dependencies
+├── artisan                   # Artisan command-line tool
+├── composer.json             # Composer configuration file
+├── package.json              # Node.js package manifest file
+├── phpunit.xml               # PHPUnit configuration file
+├── vite.config.js            # Vite configuration file
+└── webpack.mix.js            # Webpack configuration file (if applicable)
+```
+
+## 📸 Screenshots
+
+<img width="1921" height="927" alt="image" src="https://github.com/user-attachments/assets/852e3da2-e61d-4bb1-97ae-8deb2399d842" />
+
+<img width="1921" height="927" alt="image" src="https://github.com/user-attachments/assets/69c181c5-17bd-4058-a500-a038ce20d505" />
+
+<img width="1921" height="927" alt="image" src="https://github.com/user-attachments/assets/ef964778-a314-4716-b0f1-21a6cd27799a" />
+
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Make your changes and commit them with descriptive messages.
+4.  Submit a pull request.
+
+## 📬 Contact
+
+For questions or feedback, please contact: Pino Gabriele - gabriele.pno@gmail.com
+
+💖 Thanks for checking out this project! We hope it helps you build amazing web applications.
+
