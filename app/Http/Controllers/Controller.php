@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-abstract class Controller
+abstract class Controller extends \JeroenNoten\LaravelAdminLte\Http\Controllers\Controller
 {
-    //
+
 }

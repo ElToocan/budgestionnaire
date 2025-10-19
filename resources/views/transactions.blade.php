@@ -1,4 +1,4 @@
-@extends('blank')
+@extends('adminlte::page')
 
 @section('content')
 
