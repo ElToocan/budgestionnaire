@@ -13,6 +13,7 @@ class TransactionController
 
     public function store(Request $request)
     {
+
         // Validation
         $validated = $request->validate([
             'value' => 'required|numeric',

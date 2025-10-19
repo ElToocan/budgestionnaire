@@ -7,7 +7,7 @@ class DashboardController
     public function dashboard(){
 
         $data = [
-            'account' => \App\Models\Account::find(2),
+            'account' => \App\Models\Account::find(auth()->user()->id),
             'transactions' => \App\Models\Transaction::all(),
             'budgets' => \App\Models\Budget::all(),
             'lastTransaction' => \App\Models\Transaction::orderBy('created_at', 'DESC')->first(),

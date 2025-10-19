@@ -110,14 +110,13 @@
 
                 <label for="value"> Ajouter une transaction </label><br>
 
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="type" id="type" value="positive" required>
-                    <label class="form-check-label" for="positive"> Revenu </label>
-                </div>
-
-                <div class="form-check form-check-inline mb-3">
-                    <input class="form-check-input" type="radio" name="type" id="negative" value="negative">
-                    <label class="form-check-label" for="negative"> Dépense </label>
+                <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="type" id="option_a1" value="negative" checked> Dépense
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="type" id="option_a2" value="positive"> Revenu
+                    </label>
                 </div>
 
                 <div class="form-group">
