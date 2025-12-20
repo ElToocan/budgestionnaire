@@ -78,7 +78,7 @@
 
                         <div class="info-box-content">
                             <span class="info-box-text"> Derinière transaction </span>
-{{--                            @dd($lastTransaction)--}}
+                            {{--                            @dd($lastTransaction)--}}
                             <span class="info-box-number"> {{ $lastTransaction ? $lastTransaction->value.' €' : 'N/A' }} <small> {{  $lastTransaction !== null ? 'Budget :' . $lastTransaction->budget->name : ' ' }} </small> </span>
                         </div>
                         <!-- /.info-box-content -->
@@ -108,9 +108,9 @@
                 @endforeach
 
 
-{{--                <form action="{{ route('transactions.store') }}" method="POST">--}}
-                <form action="#" method="POST">
+                <form action="{{ route('transactions.store') }}" method="POST">
                     @csrf
+                    @method('POST')
 
                     <label for="value"> Ajouter une transaction </label><br>
 

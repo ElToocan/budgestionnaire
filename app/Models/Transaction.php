@@ -14,6 +14,8 @@ class Transaction extends Model
         'value',
         'reason',
         'budget_id',
+        'description',
+        'account_id',
     ];
 
     public static function getValueTransactionsAdded(): ?float
@@ -35,6 +37,19 @@ class Transaction extends Model
         return Transaction::all()
             ->where('account_id', auth()->user()->account->id )
             ->first();
+    }
+
+    public static function getTransactionByAccount(Account $account)
+    {
+        $transaction = [];
+        foreach ($account->budgets as $budget)
+        {
+            foreach ($budget->transactions as $transaction)
+            {
+                $transaction[] = $transaction;
+            }
+        }
+        return $transaction;
     }
 
     public function budget(): BelongsTo

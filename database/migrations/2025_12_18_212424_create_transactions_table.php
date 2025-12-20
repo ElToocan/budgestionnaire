@@ -11,7 +11,7 @@ return new class extends Migration {
             $table->id();
             $table->float('value');
             $table->string('reason');
-            $table->foreignId('budget_id');
+            $table->foreignId('budget_id')->nullable();
             $table->foreignId('account_id');
             $table->timestamps();
         });
