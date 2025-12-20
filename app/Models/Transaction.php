@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Collection;
 
 class Transaction extends Model
 {
@@ -39,17 +40,17 @@ class Transaction extends Model
             ->first();
     }
 
-    public static function getTransactionByAccount(Account $account)
+    public static function getTransactionByAccount(Account $account): Collection
     {
-        $transaction = [];
+        $returnedTransaction = [];
         foreach ($account->budgets as $budget)
         {
             foreach ($budget->transactions as $transaction)
             {
-                $transaction[] = $transaction;
+                $returnedTransaction[] = $transaction;
             }
         }
-        return $transaction;
+        return collect($returnedTransaction)->sortByDesc('created_at') ;
     }
 
     public function budget(): BelongsTo
