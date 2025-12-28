@@ -1,59 +1,90 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🧠 Personal Finance Manager
+A comprehensive personal finance management system designed to help users track their expenses, create budgets, and manage their financial data. This project aims to provide a user-friendly and intuitive interface for managing personal finances, making it easier for individuals to stay on top of their financial situation.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 🚀 Features
+- User authentication and authorization
+- Budget creation and management
+- Transaction tracking and management
+- Dashboard for visualizing financial data
+- Account management and integration with budgets and transactions
+- Validation and error handling for user input
 
-## About Laravel
+## 🛠️ Tech Stack
+* Frontend: Laravel AdminLTE 
+* Backend: Laravel PHP framework
+* Database: MySQL, SQLite, or MariaDB
+* Authentication: Laravel's built-in authentication system
+* Dependencies: Laravel Eloquent, Illuminate\Http\Request, and other Laravel components
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📦 Installation
+To get started with this project, follow these steps:
+1. Clone the repository to your local machine
+2. Install the required dependencies using Composer: `composer install`
+3. Set up the database by running the migrations: `php artisan migrate`
+4. Start the development server: `php artisan serve`
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 💻 Usage
+1. Register a new user account or log in to an existing one
+2. Create a new budget and add transactions to it
+3. View the dashboard to visualize your financial data
+4. Manage your accounts and integrate them with budgets and transactions
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📂 Project Structure
+```markdown
+app/
+Controllers/
+TransactionController.php
+DashboardController.php
+BudgetController.php
+HomeController.php
+...
+Models/
+Budget.php
+Account.php
+Transaction.php
+User.php
+...
+Providers/
+AppServiceProvider.php
+...
+Http/
+Controllers/
+Auth/
+LoginController.php
+RegisterController.php
+...
+config/
+auth.php
+database.php
+app.php
+...
+routes/
+web.php
+...
+public/
+index.php
+...
+vendor/
+...
+```
 
-## Learning Laravel
+## 📸 Screenshots
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+F1 - Authentification
+<img width="1357" height="609" alt="image" src="https://github.com/user-attachments/assets/ca1590bf-1fe5-41a0-a7b4-57758319835d" />
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+F2 - Dashboard
+<img width="1357" height="609" alt="image" src="https://github.com/user-attachments/assets/e125f1d0-0343-4255-bc01-380b47b7eac0" />
 
-## Laravel Sponsors
+F3 - Transactions BreaD
+<img width="1357" height="609" alt="image" src="https://github.com/user-attachments/assets/242a81ea-9454-48b9-8050-d0bf14a75504" />
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+F4 - Budgets BreaD
+<img width="1357" height="609" alt="image" src="https://github.com/user-attachments/assets/c26b86f0-efb1-411f-b734-9c9771713278" />
 
-### Premium Partners
+## 📝 License
+This project is licensed under the MIT License.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 💖 Thanks Message
+We hope you find this project helpful in managing your personal finances. If you have any feedback or suggestions, please don't hesitate to reach out.
+This is written by [readme.ai](https://readme-generator-phi.vercel.app/)
