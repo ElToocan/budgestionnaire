@@ -14,7 +14,7 @@ class TransactionFactory extends Factory
 
     public function definition(): array
     {
-        $value = rand(-50, 50) / 2.4 ;
+        $value = rand(-50, 50) ;
 
         return [
             'value' => $value,

@@ -13,7 +13,7 @@ class BudgetFactory extends Factory
 
     public function definition(): array
     {
-        $value = rand(200, 500) / 7.4 ;
+        $value = rand(200, 500);
 
         return [
             'maxValue' => $value,

@@ -51,9 +51,7 @@ class TransactionController extends Controller
 
         if($budgetId !== null){
             $budget = Budget::find($budgetId);
-            if($budget) {
-                $budget->update(['remainingValue' => $budget->remainingValue + $data['value']]);
-            }
+            $budget?->update(['remainingValue' => $budget->remainingValue + $data['value']]);
         }
 
         Transaction::create([
@@ -97,6 +95,15 @@ class TransactionController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $transaction = Transaction::findOrFail($id);
+
+        if($transaction->budget !== null){
+            $transaction->budget()->update(['remainingValue' => $transaction->budget->remainingValue + ($transaction->value * -1 )]);
+        }
+        $transaction->account()->update(['sold' => $transaction->account->sold + ($transaction->value * -1 ) ]);
+
+        $transaction->delete();
+
+        return redirect()->route('transactions.index');
     }
 }

@@ -11,11 +11,13 @@ class Transaction extends Model
 {
     use HasFactory;
 
+    /**
+     * @var \Illuminate\Support\HigherOrderCollectionProxy|mixed
+     */
     protected $fillable = [
         'value',
         'reason',
         'budget_id',
-        'description',
         'account_id',
     ];
 
@@ -33,28 +35,26 @@ class Transaction extends Model
             ->sum('value');
     }
 
-    public static function getLastTransaction() : Transaction
+    public static function getLastTransaction() : ?Transaction
     {
-        return Transaction::all()
-            ->where('account_id', auth()->user()->account->id )
+        return Transaction::where('account_id', auth()->user()->account->id )
+            ->latest()
             ->first();
     }
 
     public static function getTransactionByAccount(Account $account): Collection
     {
-        $returnedTransaction = [];
-        foreach ($account->budgets as $budget)
-        {
-            foreach ($budget->transactions as $transaction)
-            {
-                $returnedTransaction[] = $transaction;
-            }
-        }
-        return collect($returnedTransaction)->sortByDesc('created_at') ;
+        return $account->transactions;
     }
 
     public function budget(): BelongsTo
     {
         return $this->belongsTo(Budget::class);
     }
+
+    public function account(): BelongsTo
+    {
+        return $this->belongsTo(Account::class);
+    }
+
 }

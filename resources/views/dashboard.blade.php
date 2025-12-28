@@ -78,8 +78,7 @@
 
                         <div class="info-box-content">
                             <span class="info-box-text"> Derinière transaction </span>
-                            {{--                            @dd($lastTransaction)--}}
-                            <span class="info-box-number"> {{ $lastTransaction ? $lastTransaction->value.' €' : 'N/A' }} <small> {{  $lastTransaction !== null ? 'Budget :' . $lastTransaction->budget->name : ' ' }} </small> </span>
+                            <span class="info-box-number"> {{ $lastTransaction ? $lastTransaction->value.' €' : 'N/A' }} <small> {{  $lastTransaction?->budget !== null ? 'Budget :' . $lastTransaction->budget->name : 'Compte principal ' }} </small> </span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
