@@ -39,7 +39,7 @@
                                     class="{{ $transaction->value >= 0 ? 'fa fa-arrow-up text-green' : 'fa fa-arrow-down text-red' }}"></i>
                             </td>
                             <td> {{ $transaction->reason }}</td>
-                            <td> {{ $transaction->budget_id != 0 ? \App\Models\Budget::find($transaction->budget_id)->name : 'compte principale'}} </td>
+                            <td> {{ $transaction->budget != null ? $transaction->budget->name : 'compte principale'}} </td>
                             <td> {{ $transaction->created_at->format('d/m/y') }} </td>
                             {{--                                <td> <button class="btn btn-block btn-default btn-xs"> Modifier </button></td>--}}
                             <td> {{-- Bouton Delete --}}
